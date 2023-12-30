@@ -61,6 +61,6 @@ app.get('/api/jokes',(req,res)=>{
 })
 const port = process.env.PORT;
 app.listen(port,()=>{
-  console.log(`serve at  http://localhost:${process.env.PORT}`);
+  console.log(`serve at  https://deployment-server-l3be3gvb0-shaik-fazil-bashas-projects.vercel.app/${process.env.PORT}`);
 
 })
