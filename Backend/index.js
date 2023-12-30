@@ -1,9 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
 
 let app  = express();
 
+
+app.use(cors({
+  "origin":["https://deployment-client-axgc6pqyv-shaik-fazil-bashas-projects.vercel.app"]
+}))
 app.get('/',(req,res)=>{
   res.send('<h1>SERVER IS READY</h1>');
 })
