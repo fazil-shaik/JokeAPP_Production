@@ -8,7 +8,7 @@ function App() {
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
   
   useEffect(() => {
-    axios.get('https://deployment-server-nu.vercel.app/api/jokes')
+    axios.get('/api/jokes')
       .then((response) => {
         setJokes(response.data);
       })
