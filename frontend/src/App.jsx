@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const BASE = 'https://joke-app-production-server.vercel.app/'
+const BASE = 'joke-app-production-server.vercel.app/'
 
 function App() {
   const [jokes, setJokes] = useState([]);
