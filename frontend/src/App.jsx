@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
+const BASE = 'http://localhost:3000'
 
 function App() {
   const [jokes, setJokes] = useState([]);
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
   
   useEffect(() => {
-    axios.get('https://deployment-server-nu.vercel.app/api/jokes')
+    axios.get(`${BASE}/api/jokes`)
       .then((response) => {
         setJokes(response.data);
       })
