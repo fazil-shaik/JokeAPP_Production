@@ -7,14 +7,10 @@ let app  = express();
 
 
 app.use(cors({
-  origin:["https://joke-app-production-client.vercel.app/"]
+  origin:"https://joke-app-production-client.vercel.app/"
 }))
 app.get('/',(req,res)=>{
   res.send('<h1>SERVER IS READY</h1>');
-})
-
-app.get('/shaik',(req,res)=>{
-  res.send('<h1>GENerally your are in shaik Page</h1>')
 })
 
 app.get('/api/jokes',(req,res)=>{
