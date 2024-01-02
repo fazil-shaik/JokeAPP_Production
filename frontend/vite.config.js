@@ -4,10 +4,10 @@ import dotenv from 'dotenv'
 dotenv.config();
 // https://vitejs.dev/config/
 export default defineConfig({
-  // server:{
-  //     proxy: {
-  //     '/api':'http://localhost:3000',
-  //     },
-  //     },
+  server:{
+      proxy: {
+      '/api':'https://joke-app-production-server.vercel.app/',
+      },
+      },
   plugins: [react()],
 })
