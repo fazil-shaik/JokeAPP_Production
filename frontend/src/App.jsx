@@ -8,7 +8,7 @@ function App() {
   // const BASE = 'https://joke-app-production-server.vercel.app/'
   
   useEffect(() => {
-    axios.get(`https://joke-app-production-server.vercel.app/api/jokes`)
+    axios.get(`/api/jokes`)
       .then((response) => {
         setJokes(response.data);
       })
