@@ -8,7 +8,7 @@ function App() {
   
   // axios.default.withCredentials = true;
   useEffect(() => {
-    axios.get('https://joke-app-production-server.vercel.app/api/jokes')
+    axios.get('/api/jokes')
       .then((response) => {
         setJokes(response.data);
       })
