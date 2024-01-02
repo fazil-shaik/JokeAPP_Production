@@ -54,8 +54,8 @@ function App() {
       onClick={changestext}>Next Joke-----</button>
     </div>
   );
-  proxyMiddleware(App);
 }
+  proxyMiddleware(App);
 
 
 export default App;
