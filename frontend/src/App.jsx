@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import proxyMiddleware from './proxy';
 
 function App() {
   const [jokes, setJokes] = useState([]);
@@ -53,6 +54,8 @@ function App() {
       onClick={changestext}>Next Joke-----</button>
     </div>
   );
+  proxyMiddleware(App);
 }
+
 
 export default App;
