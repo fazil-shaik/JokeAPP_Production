@@ -6,7 +6,12 @@ dotenv.config();
 let app  = express();
 
 
-app.use(cors())
+app.use(cors(
+  {
+    origin:[""],
+    methods:["GET"],
+  }
+))
 
 app.get('/',(req,res)=>{
   res.send('<h1>SERVER IS READY</h1>');
