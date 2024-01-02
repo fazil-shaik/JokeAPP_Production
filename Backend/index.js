@@ -8,7 +8,7 @@ let app  = express();
 
 app.use(cors(
   {
-    origin:[""],
+    origin:["https://joke-app-production-frontend.vercel.app/"],
     methods:["GET"],
   }
 ))
