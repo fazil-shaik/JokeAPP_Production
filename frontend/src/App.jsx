@@ -6,7 +6,7 @@ function App() {
   const [jokes, setJokes] = useState([]);
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
   
-  axios.default.withCredentials = true;
+  // axios.default.withCredentials = true;
   useEffect(() => {
     axios.get('https://joke-app-production-server.vercel.app/api/jokes')
       .then((response) => {
