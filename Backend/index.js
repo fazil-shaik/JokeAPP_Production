@@ -6,9 +6,8 @@ dotenv.config();
 let app  = express();
 
 
-app.use(cors({
-  origin:"https://joke-app-production-client.vercel.app/"
-}))
+app.use(cors())
+
 app.get('/',(req,res)=>{
   res.send('<h1>SERVER IS READY</h1>');
 })
@@ -60,7 +59,7 @@ app.get('/api/jokes',(req,res)=>{
   ]
   res.send(jokes);
 })
-const port = process.env.PORT;
+const port = process.env.PORT||4000;
 app.listen(port,()=>{
   console.log(`serve at  ${process.env.PORT}`);
 
