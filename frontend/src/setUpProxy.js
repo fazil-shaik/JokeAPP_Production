@@ -1,10 +1,11 @@
 import { createProxyMiddleware } from 'http-proxy-middleware';
-
+import dotenv from 'dotenv';
+dotenv.config();
 export default function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://joke-app-production-server.vercel.app',
+      target: `${process.env.BASE}`,
       changeOrigin: true,
     })
   );
