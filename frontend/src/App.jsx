@@ -5,8 +5,9 @@ import './App.css';
 function App() {
   const [jokes, setJokes] = useState([]);
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
-  const BASE = 'http://localhost:3000'
-  
+  const BASE = 'https://joke-app-production-server.vercel.app/'
+
+  axios.default.withCredentials = true;
   useEffect(() => {
     axios.get(`${BASE}/api/jokes`)
       .then((response) => {
