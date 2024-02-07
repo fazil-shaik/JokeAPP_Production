@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+// import proxyMiddleware from './proxy';
 import './App.css';
 
 function App() {
   const [jokes, setJokes] = useState([]);
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
   // const BASE = 'https://joke-app-production-server.vercel.app/'
-  
+  const serverUrl = import.meta.env.VITE_URL;
   useEffect(() => {
-    axios.get(`/api/jokes`)
+    axios.get(`${import.meta.env.VITE_URL}/api/jokes`)
       .then((response) => {
         setJokes(response.data);
       })
