@@ -5,11 +5,12 @@ dotenv.config();
 
 let app  = express();
 
+app.use(express.static('dist'))
 
 app.use(cors(
-{
-    origin:["https://joke-app-production-frontend.vercel.app/"],
-}
+// {
+    // origin:["https://joke-app-production-frontend.vercel.app/"],
+// }
 ))
 
 app.get('/',(req,res)=>{
