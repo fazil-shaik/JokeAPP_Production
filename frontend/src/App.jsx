@@ -9,7 +9,7 @@ function App() {
   // const BASE = 'https://joke-app-production-server.vercel.app/'
   const serverUrl = import.meta.env.VITE_URL;
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_URL}/api/jokes`)
+    axios.get(`https://joke-app-production-server.vercel.app/api/jokes`)
       .then((response) => {
         setJokes(response.data);
       })
